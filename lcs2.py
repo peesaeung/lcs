@@ -2,10 +2,10 @@ def glcs(v,w,mat,mis,ind):
     s=[[0]*(len(w)+1) for i in range(len(v)+1)]
     b=[['']*(len(w)+1) for i in range(len(v)+1)] 
     for p in range(1,len(w)+1):
-        s[0][p]=s[0][p-1]-2
+        s[0][p]=s[0][p-1]+ind
         b[0][p]="←"
     for p in range(1,len(v)+1):
-        s[p][0]=s[p-1][0]-2
+        s[p][0]=s[p-1][0]+ind
         b[p][0]="↑"
     table(s,b,v,w,mat,mis,ind)
     return s,b
